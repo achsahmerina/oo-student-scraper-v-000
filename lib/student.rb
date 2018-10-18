@@ -6,7 +6,9 @@ class Student
 
   def initialize(student_hash)
     student_hash each do |k, v|
-      self.send()
+      self.send("{k}=", v)
+    end
+    @@all << self
   end
 
   def self.create_from_collection(students_array)
