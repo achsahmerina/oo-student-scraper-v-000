@@ -33,8 +33,8 @@ class Scraper
       end
     end
 
-    student[:bio] = website.css("div.bio-content.content-holder div.description-holder p").text if website.css("div.bio-content.content-holder div.description-holder p")
-    student[:profile_quote] = website.css(".profile-quote").text 
+    student[:bio] = website.css("div.bio-content.content-holder div.description-holder p").text 
+    student[:profile_quote] = website.css(".profile-quote").text
 
     student
   end
