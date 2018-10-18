@@ -23,13 +23,13 @@ class Scraper
     websites = website.css("div.social-icon-container").children.css("a").map { |icon| icon.attribute('href').value}
     websites.each do |websites|
       if websites.include?("linkedin")
-        websites = student[:linkedin] 
+        student[:linkedin] = websites
       elsif websites.include?("github")
-        websites = student[:github] 
+        student[:github] = websites
       elsif websites.include?("twitter")
-        websites = student[:twitter] 
+        student[:twitter] = websites
       else
-        websites = student[:blog] 
+        student[:blog] = websites
       end
     end
 
